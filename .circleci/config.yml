@@ -13,6 +13,6 @@ jobs:
       - checkout
       - run: python3 -m venv uday_env
       - run: source uday_env/bin/activate
-      - run: pip3 install nose
+      - run: pip3 install nose --user
       - run: pip3 install -r requirements.txt
       - run: nosetests tests/*
