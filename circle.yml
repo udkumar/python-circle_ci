@@ -22,5 +22,7 @@ jobs:
       - image: circleci/python:3.6.8
     steps:
       - checkout
+      - run: sudo chown -R circleci:circleci /usr/local/bin
+      - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
       - run: pip3 install -r requirements.txt --compile --no-cache-dir
       - run: nosetests tests/*
