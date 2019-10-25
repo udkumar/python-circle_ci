@@ -25,7 +25,6 @@ jobs:
       - run: sudo chown -R circleci:circleci /usr/local/bin
       - run: sudo chown -R circleci:circleci /usr/local/lib/python3.6/site-packages
       - run: python3 -m venv uday_env
-      - run: source uday_env/bin/activate
-      - run: pip3 install nose --user
+      - run: . uday_env/bin/activate
       - run: pip3 install --user -r requirements.txt --compile --no-cache-dir
-      - run: nosetests3 tests/*
+      - run: python3 pytest -q tests/math-test.py
