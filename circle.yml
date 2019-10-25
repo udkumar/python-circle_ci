@@ -66,4 +66,4 @@ jobs:
           name: run tests
           command: |
             . venv/bin/activate
-            ppython3 -m pytest tests/math-test.py
+            python3 -m pytest tests/math-test.py
